@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi primer Website</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+      <div class="container-nav">
+        <nav class="navbar" role="navigation">
+          <a href="index.html" class="brand">Mi página web</a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="button-menu-toggle">Menu</button>
+      </div>
+        <div class="container">
+            <h1>Bienvenidos a mi primer Website</h1>
+            <div class="row">
+                <div class="column">
+                    <h2>Presentación</h2>
+                    <p>Soy Nicolás, ¡y esta es mi primera página web!</p>
+                    <p>Estoy aprendiendo desarrollo web para crear sitios web visualmente atrapantes y funcionales.</p>
+                </div>
+                <div class="column">
+                    <h2>Función</h2>
+                    <p>A lo largo de este curso, estaré aprendiendo HTML, CSS y JavaScript. Estos lenguajes me ayudarán a crear una base sólida en el desarrollo web front-end.</p>
+                </div>
+            </div>
+        </div>
+        <button onclick="showAlert()">"¡Has click en mí!"</button>
+        <script src="script.js"></script>
+        <form id="myForm">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Enviar</button>
+          </form>
+          <const form = document.getElementById('myForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                validateForm();
+                 });>
+        </const>
+        <function validateEmail(email) {
+            const regex =  /^[^\s@]+@[^\s@]+\.[^\s@]{2,7}$/
+            return regex.test(email)
+          }
+          function validateForm() {
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value;
+            if (!validateEmail(email)) {
+              alert('Por favor ingrese un correo electrónico válido.');
+            } else {
+              alert('Correo electrónico enviado correctamente.');
+            }
+          }
+        ></function>
+    </body>
+</html> 
